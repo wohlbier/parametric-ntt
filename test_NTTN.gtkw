@@ -1,0 +1,40 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Mon May 31 20:13:30 2021
+[*]
+[dumpfile] "/home/zerotoasic/projects/parametric-ntt/test_NTTN.vcd"
+[dumpfile_mtime] "Mon May 31 20:12:39 2021"
+[dumpfile_size] 17569
+[savefile] "/home/zerotoasic/projects/parametric-ntt/test_NTTN.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*0.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 233
+[signals_width] 110
+[sst_expanded] 1
+[sst_vpaned_height] 144
+@28
+test_NTTN.clk
+@22
+test_NTTN.din[13:0]
+@28
+test_NTTN.done
+@22
+test_NTTN.dout[13:0]
+@420
+test_NTTN.ei
+test_NTTN.en
+test_NTTN.k
+@28
+test_NTTN.load_data
+test_NTTN.load_w
+@420
+test_NTTN.m
+@28
+test_NTTN.reset
+test_NTTN.start
+@29
+test_NTTN.start_intt
+[pattern_trace] 1
+[pattern_trace] 0

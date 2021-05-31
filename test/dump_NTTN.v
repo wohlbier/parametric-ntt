@@ -1,7 +1,7 @@
 module dump();
     initial begin
-        $dumpfile ("NTTN_test.vcd");
-        $dumpvars (0, NTTN_test);
+        $dumpfile ("test_NTTN.vcd");
+        $dumpvars (0, test_NTTN);
         #1;
     end
 endmodule

@@ -16,7 +16,7 @@ limitations under the License.
 
 `include "src/defines.v"
 
-module NTTN_test();
+module test_NTTN();
 
 parameter HP = 5;
 parameter FP = (2*HP);

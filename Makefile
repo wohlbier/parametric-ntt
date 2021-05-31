@@ -10,9 +10,9 @@ SOURCES= \
 	src/ModRed_sub.v \
 	src/ModRed.v \
 	src/NTT2.v \
-	src/NTTN_test.v \
 	src/NTTN.v \
-	src/ShiftReg.v
+	src/ShiftReg.v \
+	src/test_NTTN.v
 
 ICEBREAKER_DEVICE = up5k
 ICEBREAKER_PIN_DEF = fpga/icebreaker.pcf
@@ -28,7 +28,7 @@ all: test_NTTN
 test_NTTN:
 	$(RM) -rf sim_build/
 	mkdir sim_build/
-	iverilog -o sim_build/sim.vvp -s NTTN_test -s dump -g2012 $(SOURCES) test/dump_NTTN.v
+	iverilog -o sim_build/sim.vvp -s test_NTTN -s dump -g2012 $(SOURCES) test/dump_NTTN.v
 	PYTHONOPTIMIZE=${NOASSERT} MODULE=test.test_NTTN vvp -M $$(cocotb-config --prefix)/cocotb/libs -m libcocotbvpi_icarus sim_build/sim.vvp
 
 show_%: %.vcd %.gtkw
@@ -57,6 +57,9 @@ lint:
 	verible-verilog-lint src/*v --rules_config verible.rules
 
 clean:
-	-$(RM) -rf *vcd fpga/*bin fpga/*log sim_build test/*.txt test/__pycache__
+	-$(RM) -rf *vcd fpga/*bin fpga/*log sim_build test/__pycache__
 
-.PHONY: clean
+allclean: clean
+	-$(RM) -rf results.xml test/*.txt
+
+.PHONY: allclean clean
