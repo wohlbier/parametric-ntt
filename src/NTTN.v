@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-`include "defines.v"
+`include "src/defines.v"
 
 // start: HIGH for 1 cc (after 1 cc, data starts going in)
 // done : HIGH for 1 cc (after 1 cc, data starts going out)

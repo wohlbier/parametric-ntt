@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-`include "defines.v"
+`include "src/defines.v"
 
 module NTT2(input 					        clk,reset,
 			input      [`DATA_SIZE_ARB-1:0] q,

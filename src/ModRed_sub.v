@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-`include "defines.v"
+`include "src/defines.v"
 
 module ModRed_sub #(parameter CURR_DATA = 0, NEXT_DATA = 0)
                   (input                                     clk,reset,
