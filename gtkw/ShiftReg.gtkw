@@ -1,0 +1,25 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Tue Jun  1 23:49:03 2021
+[*]
+[dumpfile] "/home/zerotoasic/projects/parametric-ntt/vcd/ShiftReg.vcd"
+[dumpfile_mtime] "Tue Jun  1 23:48:35 2021"
+[dumpfile_size] 390
+[savefile] "/home/zerotoasic/projects/parametric-ntt/gtkw/ShiftReg.gtkw"
+[timestart] 0
+[size] 1658 652
+[pos] -1 -1
+*-13.000000 1420000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 233
+[signals_width] 247
+[sst_expanded] 1
+[sst_vpaned_height] 161
+@29
+ShiftReg.clk
+@22
+ShiftReg.data_in[31:0]
+ShiftReg.data_out[31:0]
+@28
+ShiftReg.reset
+[pattern_trace] 1
+[pattern_trace] 0

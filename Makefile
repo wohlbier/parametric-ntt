@@ -25,13 +25,13 @@ export PYTHONPATH := test:$(PYTHONPATH)
 
 all: test_NTTN
 
-test_NTTN:
-	$(RM) -rf sim_build/
-	mkdir sim_build/
-	iverilog -o sim_build/sim.vvp -s test_NTTN -s dump -g2012 $(SOURCES) test/dump_NTTN.v
-	PYTHONOPTIMIZE=${NOASSERT} MODULE=test.test_NTTN vvp -M $$(cocotb-config --prefix)/cocotb/libs -m libcocotbvpi_icarus sim_build/sim.vvp
+test_%: src/%.v
+	-$(RM) -rf sim_build
+	mkdir sim_build
+	iverilog -o sim_build/sim.vvp -s $* -s dump -g2012 $(SOURCES) test/dump_$*.v
+	PYTHONOPTIMIZE=${NOASSERT} MODULE=test.test_$* vvp -M $$(cocotb-config --prefix)/cocotb/libs -m libcocotbvpi_icarus sim_build/sim.vvp
 
-show_%: %.vcd %.gtkw
+show_%: vcd/%.vcd gtkw/%.gtkw
 	gtkwave $^
 
 # FPGA recipes
