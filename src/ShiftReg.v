@@ -16,7 +16,9 @@
 `default_nettype none
 `timescale 1ns/1ns
 
-module ShiftReg #(parameter SHIFT = 0, DATA=32)
+module ShiftReg
+  //#(parameter SHIFT = 0, DATA=32)
+  #(parameter SHIFT = 8, DATA=32)
    (input         clk,reset,
     input [DATA-1:0]  data_in,
     output [DATA-1:0] data_out);

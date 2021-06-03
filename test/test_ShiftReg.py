@@ -15,9 +15,11 @@ async def test_ShiftReg(dut):
     cocotb.fork(clock.start())
 
     await reset(dut)
-    
-    dut.data_in = 1
-    await ClockCycles(dut.clk, 1)
-    dut.data_in = 0
-    await ClockCycles(dut.clk, 64)
-#    assert(dut.z == 9223372163556310989)
+
+    for i in range(0,4):
+        dut.data_in = 1
+        await ClockCycles(dut.clk, 1)
+        dut.data_in = 0
+        await ClockCycles(dut.clk, 1)
+
+    await ClockCycles(dut.clk, 8)
